@@ -15,6 +15,13 @@
 		4845F26520905D7A00A760EC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4845F26420905D7A00A760EC /* main.m */; };
 		4845F26F20905D7B00A760EC /* FastWebViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4845F26E20905D7B00A760EC /* FastWebViewTests.m */; };
 		4845F27A20905D7B00A760EC /* FastWebViewUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4845F27920905D7B00A760EC /* FastWebViewUITests.m */; };
+		4845F28A2090640500A760EC /* FastWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4845F2892090640500A760EC /* FastWebViewController.m */; };
+		4845F28D209066B500A760EC /* FastWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4845F28C209066B500A760EC /* FastWebView.m */; };
+		4845F29320907FE300A760EC /* ShopWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4845F29220907FE300A760EC /* ShopWebViewController.m */; };
+		4845F2962091758800A760EC /* UIViewController+BackButtonHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 4845F2952091758800A760EC /* UIViewController+BackButtonHandler.m */; };
+		4845F29920917F3600A760EC /* FastWebViewController+WebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4845F29820917F3600A760EC /* FastWebViewController+WebView.m */; };
+		4845F29C2091D41F00A760EC /* NSURLProtocol+WebKitSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 4845F29B2091D41F00A760EC /* NSURLProtocol+WebKitSupport.m */; };
+		4845F2A02091D53300A760EC /* FastWebURLProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = 4845F29F2091D53300A760EC /* FastWebURLProtocol.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +58,20 @@
 		4845F27520905D7B00A760EC /* FastWebViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FastWebViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4845F27920905D7B00A760EC /* FastWebViewUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FastWebViewUITests.m; sourceTree = "<group>"; };
 		4845F27B20905D7B00A760EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4845F2882090640500A760EC /* FastWebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FastWebViewController.h; sourceTree = "<group>"; };
+		4845F2892090640500A760EC /* FastWebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FastWebViewController.m; sourceTree = "<group>"; };
+		4845F28B209066B500A760EC /* FastWebView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FastWebView.h; sourceTree = "<group>"; };
+		4845F28C209066B500A760EC /* FastWebView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FastWebView.m; sourceTree = "<group>"; };
+		4845F29120907FE300A760EC /* ShopWebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShopWebViewController.h; sourceTree = "<group>"; };
+		4845F29220907FE300A760EC /* ShopWebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShopWebViewController.m; sourceTree = "<group>"; };
+		4845F2942091758700A760EC /* UIViewController+BackButtonHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+BackButtonHandler.h"; sourceTree = "<group>"; };
+		4845F2952091758800A760EC /* UIViewController+BackButtonHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+BackButtonHandler.m"; sourceTree = "<group>"; };
+		4845F29720917F3600A760EC /* FastWebViewController+WebView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FastWebViewController+WebView.h"; sourceTree = "<group>"; };
+		4845F29820917F3600A760EC /* FastWebViewController+WebView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "FastWebViewController+WebView.m"; sourceTree = "<group>"; };
+		4845F29A2091D41F00A760EC /* NSURLProtocol+WebKitSupport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURLProtocol+WebKitSupport.h"; sourceTree = "<group>"; };
+		4845F29B2091D41F00A760EC /* NSURLProtocol+WebKitSupport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURLProtocol+WebKitSupport.m"; sourceTree = "<group>"; };
+		4845F29E2091D53300A760EC /* FastWebURLProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FastWebURLProtocol.h; sourceTree = "<group>"; };
+		4845F29F2091D53300A760EC /* FastWebURLProtocol.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FastWebURLProtocol.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +122,7 @@
 		4845F25420905D7800A760EC /* FastWebView */ = {
 			isa = PBXGroup;
 			children = (
+				4845F28720905DA400A760EC /* FastWebView */,
 				4845F25520905D7800A760EC /* AppDelegate.h */,
 				4845F25620905D7800A760EC /* AppDelegate.m */,
 				4845F25820905D7800A760EC /* ViewController.h */,
@@ -110,6 +132,8 @@
 				4845F26020905D7A00A760EC /* LaunchScreen.storyboard */,
 				4845F26320905D7A00A760EC /* Info.plist */,
 				4845F26420905D7A00A760EC /* main.m */,
+				4845F29120907FE300A760EC /* ShopWebViewController.h */,
+				4845F29220907FE300A760EC /* ShopWebViewController.m */,
 			);
 			path = FastWebView;
 			sourceTree = "<group>";
@@ -130,6 +154,33 @@
 				4845F27B20905D7B00A760EC /* Info.plist */,
 			);
 			path = FastWebViewUITests;
+			sourceTree = "<group>";
+		};
+		4845F28720905DA400A760EC /* FastWebView */ = {
+			isa = PBXGroup;
+			children = (
+				4845F29D2091D4BE00A760EC /* Category */,
+				4845F2882090640500A760EC /* FastWebViewController.h */,
+				4845F2892090640500A760EC /* FastWebViewController.m */,
+				4845F28B209066B500A760EC /* FastWebView.h */,
+				4845F28C209066B500A760EC /* FastWebView.m */,
+				4845F29E2091D53300A760EC /* FastWebURLProtocol.h */,
+				4845F29F2091D53300A760EC /* FastWebURLProtocol.m */,
+			);
+			path = FastWebView;
+			sourceTree = "<group>";
+		};
+		4845F29D2091D4BE00A760EC /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				4845F2942091758700A760EC /* UIViewController+BackButtonHandler.h */,
+				4845F2952091758800A760EC /* UIViewController+BackButtonHandler.m */,
+				4845F29720917F3600A760EC /* FastWebViewController+WebView.h */,
+				4845F29820917F3600A760EC /* FastWebViewController+WebView.m */,
+				4845F29A2091D41F00A760EC /* NSURLProtocol+WebKitSupport.h */,
+				4845F29B2091D41F00A760EC /* NSURLProtocol+WebKitSupport.m */,
+			);
+			path = Category;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -263,8 +314,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				4845F25A20905D7800A760EC /* ViewController.m in Sources */,
+				4845F2A02091D53300A760EC /* FastWebURLProtocol.m in Sources */,
+				4845F2962091758800A760EC /* UIViewController+BackButtonHandler.m in Sources */,
+				4845F29320907FE300A760EC /* ShopWebViewController.m in Sources */,
+				4845F29920917F3600A760EC /* FastWebViewController+WebView.m in Sources */,
+				4845F29C2091D41F00A760EC /* NSURLProtocol+WebKitSupport.m in Sources */,
+				4845F28A2090640500A760EC /* FastWebViewController.m in Sources */,
 				4845F26520905D7A00A760EC /* main.m in Sources */,
 				4845F25720905D7800A760EC /* AppDelegate.m in Sources */,
+				4845F28D209066B500A760EC /* FastWebView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -434,7 +492,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = FTH98Q7WDL;
 				INFOPLIST_FILE = FastWebView/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -450,7 +510,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = FTH98Q7WDL;
 				INFOPLIST_FILE = FastWebView/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

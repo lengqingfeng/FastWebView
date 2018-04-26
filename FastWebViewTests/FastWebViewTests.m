@@ -2,7 +2,7 @@
 //  FastWebViewTests.m
 //  FastWebViewTests
 //
-//  Created by 冷胜任 on 2018/4/25.
+//  Created byAllen on 2018/4/25.
 //  Copyright © 2018年 taobao.com. All rights reserved.
 //
 
