@@ -19,9 +19,16 @@
 		4845F28D209066B500A760EC /* FastWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4845F28C209066B500A760EC /* FastWebView.m */; };
 		4845F29320907FE300A760EC /* ShopWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4845F29220907FE300A760EC /* ShopWebViewController.m */; };
 		4845F2962091758800A760EC /* UIViewController+BackButtonHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 4845F2952091758800A760EC /* UIViewController+BackButtonHandler.m */; };
-		4845F29920917F3600A760EC /* FastWebViewController+WebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4845F29820917F3600A760EC /* FastWebViewController+WebView.m */; };
+		4845F29920917F3600A760EC /* FastWebViewController+JSBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 4845F29820917F3600A760EC /* FastWebViewController+JSBridge.m */; };
 		4845F29C2091D41F00A760EC /* NSURLProtocol+WebKitSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 4845F29B2091D41F00A760EC /* NSURLProtocol+WebKitSupport.m */; };
 		4845F2A02091D53300A760EC /* FastWebURLProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = 4845F29F2091D53300A760EC /* FastWebURLProtocol.m */; };
+		48AC66DD2092FD0200298916 /* FastToast.m in Sources */ = {isa = PBXBuildFile; fileRef = 48AC66DA2092FD0200298916 /* FastToast.m */; };
+		48AC66E02092FF8100298916 /* FastToast.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 48AC66DF2092FF8100298916 /* FastToast.bundle */; };
+		48AC66E22093012000298916 /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = 48AC66E12093012000298916 /* index.html */; };
+		48AC66EB2093040500298916 /* FasterRoute.m in Sources */ = {isa = PBXBuildFile; fileRef = 48AC66E42093040400298916 /* FasterRoute.m */; };
+		48AC66EC2093040500298916 /* FasterRouteURL.plist in Resources */ = {isa = PBXBuildFile; fileRef = 48AC66E52093040400298916 /* FasterRouteURL.plist */; };
+		48AC66ED2093040500298916 /* NSDictionary+RouteCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 48AC66E72093040400298916 /* NSDictionary+RouteCategory.m */; };
+		48AC66EE2093040500298916 /* NSObject+ClassProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 48AC66E92093040400298916 /* NSObject+ClassProperty.m */; };
 		7490855B28B80BDB2B82A595 /* libPods-FastWebView.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D35FDF212229407430958F1 /* libPods-FastWebView.a */; };
 /* End PBXBuildFile section */
 
@@ -67,12 +74,23 @@
 		4845F29220907FE300A760EC /* ShopWebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShopWebViewController.m; sourceTree = "<group>"; };
 		4845F2942091758700A760EC /* UIViewController+BackButtonHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+BackButtonHandler.h"; sourceTree = "<group>"; };
 		4845F2952091758800A760EC /* UIViewController+BackButtonHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+BackButtonHandler.m"; sourceTree = "<group>"; };
-		4845F29720917F3600A760EC /* FastWebViewController+WebView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FastWebViewController+WebView.h"; sourceTree = "<group>"; };
-		4845F29820917F3600A760EC /* FastWebViewController+WebView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "FastWebViewController+WebView.m"; sourceTree = "<group>"; };
+		4845F29720917F3600A760EC /* FastWebViewController+JSBridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FastWebViewController+JSBridge.h"; sourceTree = "<group>"; };
+		4845F29820917F3600A760EC /* FastWebViewController+JSBridge.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "FastWebViewController+JSBridge.m"; sourceTree = "<group>"; };
 		4845F29A2091D41F00A760EC /* NSURLProtocol+WebKitSupport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURLProtocol+WebKitSupport.h"; sourceTree = "<group>"; };
 		4845F29B2091D41F00A760EC /* NSURLProtocol+WebKitSupport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURLProtocol+WebKitSupport.m"; sourceTree = "<group>"; };
 		4845F29E2091D53300A760EC /* FastWebURLProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FastWebURLProtocol.h; sourceTree = "<group>"; };
 		4845F29F2091D53300A760EC /* FastWebURLProtocol.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FastWebURLProtocol.m; sourceTree = "<group>"; };
+		48AC66DA2092FD0200298916 /* FastToast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FastToast.m; sourceTree = "<group>"; };
+		48AC66DC2092FD0200298916 /* FastToast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FastToast.h; sourceTree = "<group>"; };
+		48AC66DF2092FF8100298916 /* FastToast.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = FastToast.bundle; sourceTree = "<group>"; };
+		48AC66E12093012000298916 /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
+		48AC66E42093040400298916 /* FasterRoute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FasterRoute.m; sourceTree = "<group>"; };
+		48AC66E52093040400298916 /* FasterRouteURL.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = FasterRouteURL.plist; sourceTree = "<group>"; };
+		48AC66E62093040400298916 /* NSObject+ClassProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+ClassProperty.h"; sourceTree = "<group>"; };
+		48AC66E72093040400298916 /* NSDictionary+RouteCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+RouteCategory.m"; sourceTree = "<group>"; };
+		48AC66E82093040400298916 /* FasterRoute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FasterRoute.h; sourceTree = "<group>"; };
+		48AC66E92093040400298916 /* NSObject+ClassProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+ClassProperty.m"; sourceTree = "<group>"; };
+		48AC66EA2093040400298916 /* NSDictionary+RouteCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+RouteCategory.h"; sourceTree = "<group>"; };
 		5B7A499B34EA398AF8F4EA57 /* Pods-FastWebView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FastWebView.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FastWebView/Pods-FastWebView.debug.xcconfig"; sourceTree = "<group>"; };
 		7D35FDF212229407430958F1 /* libPods-FastWebView.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FastWebView.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB68073FB0E0A6A6277EF9EA /* Pods-FastWebView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FastWebView.release.xcconfig"; path = "Pods/Target Support Files/Pods-FastWebView/Pods-FastWebView.release.xcconfig"; sourceTree = "<group>"; };
@@ -129,6 +147,7 @@
 		4845F25420905D7800A760EC /* FastWebView */ = {
 			isa = PBXGroup;
 			children = (
+				48AC66E32093040400298916 /* FasterRoute */,
 				4845F28720905DA400A760EC /* FastWebView */,
 				4845F25520905D7800A760EC /* AppDelegate.h */,
 				4845F25620905D7800A760EC /* AppDelegate.m */,
@@ -173,6 +192,10 @@
 				4845F28C209066B500A760EC /* FastWebView.m */,
 				4845F29E2091D53300A760EC /* FastWebURLProtocol.h */,
 				4845F29F2091D53300A760EC /* FastWebURLProtocol.m */,
+				48AC66DC2092FD0200298916 /* FastToast.h */,
+				48AC66DA2092FD0200298916 /* FastToast.m */,
+				48AC66E12093012000298916 /* index.html */,
+				48AC66DF2092FF8100298916 /* FastToast.bundle */,
 			);
 			path = FastWebView;
 			sourceTree = "<group>";
@@ -182,12 +205,26 @@
 			children = (
 				4845F2942091758700A760EC /* UIViewController+BackButtonHandler.h */,
 				4845F2952091758800A760EC /* UIViewController+BackButtonHandler.m */,
-				4845F29720917F3600A760EC /* FastWebViewController+WebView.h */,
-				4845F29820917F3600A760EC /* FastWebViewController+WebView.m */,
+				4845F29720917F3600A760EC /* FastWebViewController+JSBridge.h */,
+				4845F29820917F3600A760EC /* FastWebViewController+JSBridge.m */,
 				4845F29A2091D41F00A760EC /* NSURLProtocol+WebKitSupport.h */,
 				4845F29B2091D41F00A760EC /* NSURLProtocol+WebKitSupport.m */,
 			);
 			path = Category;
+			sourceTree = "<group>";
+		};
+		48AC66E32093040400298916 /* FasterRoute */ = {
+			isa = PBXGroup;
+			children = (
+				48AC66E52093040400298916 /* FasterRouteURL.plist */,
+				48AC66E42093040400298916 /* FasterRoute.m */,
+				48AC66E82093040400298916 /* FasterRoute.h */,
+				48AC66E62093040400298916 /* NSObject+ClassProperty.h */,
+				48AC66E92093040400298916 /* NSObject+ClassProperty.m */,
+				48AC66EA2093040400298916 /* NSDictionary+RouteCategory.h */,
+				48AC66E72093040400298916 /* NSDictionary+RouteCategory.m */,
+			);
+			path = FasterRoute;
 			sourceTree = "<group>";
 		};
 		8ADC60FA7E9AD2BB9C7E1CA8 /* Frameworks */ = {
@@ -311,9 +348,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				48AC66E22093012000298916 /* index.html in Resources */,
 				4845F26220905D7A00A760EC /* LaunchScreen.storyboard in Resources */,
+				48AC66E02092FF8100298916 /* FastToast.bundle in Resources */,
 				4845F25F20905D7A00A760EC /* Assets.xcassets in Resources */,
 				4845F25D20905D7800A760EC /* Main.storyboard in Resources */,
+				48AC66EC2093040500298916 /* FasterRouteURL.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -359,16 +399,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				48AC66EB2093040500298916 /* FasterRoute.m in Sources */,
 				4845F25A20905D7800A760EC /* ViewController.m in Sources */,
+				48AC66ED2093040500298916 /* NSDictionary+RouteCategory.m in Sources */,
+				48AC66EE2093040500298916 /* NSObject+ClassProperty.m in Sources */,
 				4845F2A02091D53300A760EC /* FastWebURLProtocol.m in Sources */,
 				4845F2962091758800A760EC /* UIViewController+BackButtonHandler.m in Sources */,
 				4845F29320907FE300A760EC /* ShopWebViewController.m in Sources */,
-				4845F29920917F3600A760EC /* FastWebViewController+WebView.m in Sources */,
+				4845F29920917F3600A760EC /* FastWebViewController+JSBridge.m in Sources */,
 				4845F29C2091D41F00A760EC /* NSURLProtocol+WebKitSupport.m in Sources */,
 				4845F28A2090640500A760EC /* FastWebViewController.m in Sources */,
 				4845F26520905D7A00A760EC /* main.m in Sources */,
 				4845F25720905D7800A760EC /* AppDelegate.m in Sources */,
 				4845F28D209066B500A760EC /* FastWebView.m in Sources */,
+				48AC66DD2092FD0200298916 /* FastToast.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -537,15 +581,20 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5B7A499B34EA398AF8F4EA57 /* Pods-FastWebView.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FTH98Q7WDL;
 				INFOPLIST_FILE = FastWebView/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = TB.FastWebView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = "${SRCROOT}/**";
 			};
 			name = Debug;
 		};
@@ -553,15 +602,20 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = AB68073FB0E0A6A6277EF9EA /* Pods-FastWebView.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FTH98Q7WDL;
 				INFOPLIST_FILE = FastWebView/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = TB.FastWebView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = "${SRCROOT}/**";
 			};
 			name = Release;
 		};
@@ -571,7 +625,11 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = FastWebViewTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = TB.FastWebViewTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -585,7 +643,11 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = FastWebViewTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = TB.FastWebViewTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -598,7 +660,11 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = FastWebViewUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = TB.FastWebViewUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -611,7 +677,11 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = FastWebViewUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = TB.FastWebViewUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";

@@ -7,15 +7,15 @@
 //
 
 #import "FastWebViewController.h"
-#import "FastWebView.h"
-#import "FastWebViewController+WebView.h"
+
+#import "FastWebViewController+JSBridge.h"
 #import "UIViewController+BackButtonHandler.h"
 #define kWebWidth [UIScreen mainScreen].bounds.size.width
 #define kWebHeight [UIScreen mainScreen].bounds.size.height
 static NSString *const kTitle = @"title";
 static NSString *const kEstimatedProgress = @"estimatedProgress";
 @interface FastWebViewController ()
-@property (nonatomic, strong) FastWebView *webView;
+
 @property (nonatomic, assign) BOOL isUseCookie;
 @property (strong, nonatomic) UIProgressView *progressView;
 
@@ -28,7 +28,9 @@ static NSString *const kEstimatedProgress = @"estimatedProgress";
     self.isUseCookie = NO;
     self.view.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:self.webView];
-    [self.view addSubview:self.progressView];
+    [self initWithJSBridge];
+    [self initWithProgressView];
+
 
     // Do any additional setup after loading the view.
 }
@@ -57,12 +59,11 @@ static NSString *const kEstimatedProgress = @"estimatedProgress";
 }
 
 #pragma mark - 进度条设置
-- (UIProgressView *)progressView {
-    if (!_progressView) {
-        _progressView = [[UIProgressView alloc]initWithFrame:CGRectMake(0, 64, CGRectGetWidth(self.view.frame),5)];
-        _progressView.progressTintColor = [UIColor blueColor];
-    }
-    return _progressView;
+- (void)initWithProgressView {
+    self.progressView = [[UIProgressView alloc]initWithFrame:CGRectMake(0, 64, CGRectGetWidth(self.view.frame),5)];
+    self.progressView.progressTintColor = [UIColor blueColor];
+    self.progressView.trackTintColor = [UIColor whiteColor];
+    [self.view addSubview:self.progressView];
 }
 
 - (void)setProgressColor:(UIColor *)progressColor {
@@ -147,9 +148,15 @@ static NSString *const kEstimatedProgress = @"estimatedProgress";
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
     if ([keyPath isEqual:kEstimatedProgress] && object == _webView) {
+           if (self.webView.estimatedProgress <= 0) {
+                return;
+            }
+        
+            NSLog(@"progress==%f",self.webView.estimatedProgress);
+        
             [self.progressView setAlpha:1.0f];
-            [self.progressView setProgress:_webView.estimatedProgress animated:YES];
-            if(_webView.estimatedProgress >= 1.0f) {
+            [self.progressView setProgress:self.webView.estimatedProgress animated:YES];
+            if(self.webView.estimatedProgress >= 1.0f) {
                 [UIView animateWithDuration:0.3
                                       delay:0.3
                                     options:UIViewAnimationOptionCurveEaseOut

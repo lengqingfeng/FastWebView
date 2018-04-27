@@ -16,9 +16,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.loadURLString = @"https://www.jianshu.com";
-    self.progressColor = [UIColor grayColor];
-    self.userAgent = @"/baidu";
+    self.localHTMLName = @"index";
+//    self.loadURLString = @"https://www.jianshu.com";
+//    self.progressColor = [UIColor grayColor];
+    
+//    self.userAgent = @"/baidu";
 }
 
 - (void)didReceiveMemoryWarning {

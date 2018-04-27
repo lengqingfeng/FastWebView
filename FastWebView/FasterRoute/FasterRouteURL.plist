@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>URL</key>
+	<dict>
+		<key>faster://web/base</key>
+		<dict>
+			<key>className</key>
+			<string>FastWebViewController</string>
+			<key>isStoryboard</key>
+			<false/>
+			<key>stroyboardName</key>
+			<string>Main</string>
+		</dict>
+		<key>faster:/me/setinfo</key>
+		<dict>
+			<key>className</key>
+			<string>MeViewController</string>
+			<key>isStoryboard</key>
+			<false/>
+			<key>stroyboardName</key>
+			<string></string>
+		</dict>
+	</dict>
+	<key>Storyboard</key>
+	<dict>
+		<key>Main.storyboard</key>
+		<array>
+			<dict>
+				<key>stroyboardName</key>
+				<string>Main</string>
+				<key>className</key>
+				<string>HomeViewController</string>
+			</dict>
+		</array>
+	</dict>
+</dict>
+</plist>

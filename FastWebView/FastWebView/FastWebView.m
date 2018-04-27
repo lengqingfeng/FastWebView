@@ -9,6 +9,7 @@
 #import "FastWebView.h"
 #import "NSURLProtocol+WebKitSupport.h"
 #import "FastWebURLProtocol.h"
+#import "WKWebViewJavascriptBridge.h"
 @interface FastWebView ()
 @property (nonatomic, strong) UIRefreshControl *refreshControl;
 @end
@@ -27,14 +28,16 @@
     }
     
  
-    [self openURLProtocol];
+    //[self openURLProtocol];
+    
     WKWebViewConfiguration *configuration = [[WKWebViewConfiguration alloc] init];
-//    configuration.allowsInlineMediaPlayback = YES;
-////    NSString *related = [NSString stringWithFormat:@"%@%@%@",@"_setRe", @"latedWe", @"bView:"];
-////    SEL relatedSel = NSSelectorFromString(related);
-////    if([configuration respondsToSelector:relatedSel]){
-////        [configuration performSelector:relatedSel withObject:self];
-////    }
+    configuration.allowsInlineMediaPlayback = YES;
+    
+//    NSString *related = [NSString stringWithFormat:@"%@%@%@",@"_setRe", @"latedWe", @"bView:"];
+//    SEL relatedSel = NSSelectorFromString(related);
+//    if([configuration respondsToSelector:relatedSel]){
+//       [configuration performSelector:relatedSel withObject:self];
+//    }
    
     configuration.userContentController = userContentController;
     WKPreferences *preferences = [WKPreferences new];
@@ -88,11 +91,12 @@
 #pragma mark - WKNavigationDelegate
 /* 页面开始加载 */
 - (void)webView:(WKWebView *)webView didStartProvisionalNavigation:(WKNavigation *)navigation {
+    NSLog(@"web 页面开始加载 ");
 }
 
 /* 开始返回内容 */
 - (void)webView:(WKWebView *)webView didCommitNavigation:(WKNavigation *)navigation {
-    
+    NSLog(@"web 开始返回内容");
 }
 
 /* 页面加载完成 */
@@ -111,8 +115,18 @@
 
 /* 在发送请求之前，决定是否跳转 */
 - (void)webView:(WKWebView *)webView decidePolicyForNavigationAction:(WKNavigationAction *)navigationAction decisionHandler:(void (^)(WKNavigationActionPolicy))decisionHandler{
-    //允许跳转
+    WebViewJavascriptBridgeBase *base = [[WebViewJavascriptBridgeBase alloc] init];
+    if ([base isWebViewJavascriptBridgeURL:navigationAction.request.URL]) {
+        return;
+    }
+
+    //如果是跳转一个新页面
+    if (navigationAction.targetFrame == nil && ![ navigationAction.targetFrame isMainFrame]) {
+        [webView loadRequest:navigationAction.request];
+    }
+    
     decisionHandler(WKNavigationActionPolicyAllow);
+
     //不允许跳转
     //decisionHandler(WKNavigationActionPolicyCancel);
 }

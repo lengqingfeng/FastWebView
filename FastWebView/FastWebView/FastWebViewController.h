@@ -7,8 +7,20 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "WKWebViewJavascriptBridge.h"
+#import "FastWebView.h"
 
 @interface FastWebViewController : UIViewController
+
+/**
+ web组件
+ */
+@property (nonatomic, strong) FastWebView *webView;
+
+/**
+  H5 通信bridge
+ */
+@property(nonatomic, strong) WKWebViewJavascriptBridge *bridge;
 
 /**
  加载Web 页面 URL

@@ -5,4 +5,5 @@ pod 'WebViewJavascriptBridge', '~> 6.0.2'
 pod 'MBProgressHUD', '~> 0.9.2'
 pod 'AFNetworking', '~> 3.1.0'
 pod 'SDWebImage', '~> 4.0.0'
+pod 'SDWebImage/WebP'
 end

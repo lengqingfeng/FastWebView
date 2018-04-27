@@ -8,7 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import <WebKit/WebKit.h>
+
 @interface FastWebView :WKWebView<WKUIDelegate,WKNavigationDelegate>
+
 - (instancetype)initWithFrame:(CGRect)frame cookie:(NSString *)cookie;
 /**
  是否开启下拉刷新控件 默认NO
