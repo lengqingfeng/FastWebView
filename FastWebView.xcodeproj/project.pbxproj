@@ -22,6 +22,7 @@
 		4845F29920917F3600A760EC /* FastWebViewController+WebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4845F29820917F3600A760EC /* FastWebViewController+WebView.m */; };
 		4845F29C2091D41F00A760EC /* NSURLProtocol+WebKitSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 4845F29B2091D41F00A760EC /* NSURLProtocol+WebKitSupport.m */; };
 		4845F2A02091D53300A760EC /* FastWebURLProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = 4845F29F2091D53300A760EC /* FastWebURLProtocol.m */; };
+		7490855B28B80BDB2B82A595 /* libPods-FastWebView.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D35FDF212229407430958F1 /* libPods-FastWebView.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +73,9 @@
 		4845F29B2091D41F00A760EC /* NSURLProtocol+WebKitSupport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURLProtocol+WebKitSupport.m"; sourceTree = "<group>"; };
 		4845F29E2091D53300A760EC /* FastWebURLProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FastWebURLProtocol.h; sourceTree = "<group>"; };
 		4845F29F2091D53300A760EC /* FastWebURLProtocol.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FastWebURLProtocol.m; sourceTree = "<group>"; };
+		5B7A499B34EA398AF8F4EA57 /* Pods-FastWebView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FastWebView.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FastWebView/Pods-FastWebView.debug.xcconfig"; sourceTree = "<group>"; };
+		7D35FDF212229407430958F1 /* libPods-FastWebView.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FastWebView.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AB68073FB0E0A6A6277EF9EA /* Pods-FastWebView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FastWebView.release.xcconfig"; path = "Pods/Target Support Files/Pods-FastWebView/Pods-FastWebView.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +83,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7490855B28B80BDB2B82A595 /* libPods-FastWebView.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -106,6 +111,8 @@
 				4845F26D20905D7B00A760EC /* FastWebViewTests */,
 				4845F27820905D7B00A760EC /* FastWebViewUITests */,
 				4845F25320905D7800A760EC /* Products */,
+				A4AC959CD07CF89B160E54DE /* Pods */,
+				8ADC60FA7E9AD2BB9C7E1CA8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -183,6 +190,23 @@
 			path = Category;
 			sourceTree = "<group>";
 		};
+		8ADC60FA7E9AD2BB9C7E1CA8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7D35FDF212229407430958F1 /* libPods-FastWebView.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A4AC959CD07CF89B160E54DE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5B7A499B34EA398AF8F4EA57 /* Pods-FastWebView.debug.xcconfig */,
+				AB68073FB0E0A6A6277EF9EA /* Pods-FastWebView.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -190,6 +214,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4845F27E20905D7B00A760EC /* Build configuration list for PBXNativeTarget "FastWebView" */;
 			buildPhases = (
+				77A63298F9CF00C006B9178B /* [CP] Check Pods Manifest.lock */,
 				4845F24E20905D7800A760EC /* Sources */,
 				4845F24F20905D7800A760EC /* Frameworks */,
 				4845F25020905D7800A760EC /* Resources */,
@@ -307,6 +332,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		77A63298F9CF00C006B9178B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FastWebView-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		4845F24E20905D7800A760EC /* Sources */ = {
@@ -489,16 +535,14 @@
 		};
 		4845F27F20905D7B00A760EC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5B7A499B34EA398AF8F4EA57 /* Pods-FastWebView.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FTH98Q7WDL;
 				INFOPLIST_FILE = FastWebView/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = TB.FastWebView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -507,16 +551,14 @@
 		};
 		4845F28020905D7B00A760EC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AB68073FB0E0A6A6277EF9EA /* Pods-FastWebView.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FTH98Q7WDL;
 				INFOPLIST_FILE = FastWebView/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = TB.FastWebView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -529,11 +571,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = FastWebViewTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = TB.FastWebViewTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -547,11 +585,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = FastWebViewTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = TB.FastWebViewTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -564,11 +598,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = FastWebViewUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = TB.FastWebViewUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -581,11 +611,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = FastWebViewUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = TB.FastWebViewUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
